@@ -20,8 +20,8 @@ public class Main {
     public static void Medium(double x, double a, double b, double z) {
 
         // Задаем систему уравнений
-        double[][] matrix = {{2.8 * Math.pow(Math.sin(a * x), 2), -b * Math.pow(x, 3), 0},
-                             {0, z * Math.pow(Math.cos(a * x + b), 2) + 1, z},
+        double[][] matrix = {{2.8 * Math.pow(Math.sin(Math.toDegrees(a * x)), 2), -b * Math.pow(x, 3), 0},
+                             {0, z * Math.pow(Math.cos(Math.toDegrees(a * x + b)), 2) + 1, z},
                              {2.5 * a * Math.exp(2.5 * a * x), z * b * x, 1}};
 
         // задаем константы системы уравнений
@@ -92,7 +92,8 @@ public class Main {
         // псевдослучаный ввод значений для компьютера
         int[] computerValues = new int[3];
         for(int i = 0; i < 3; i++) {
-            computerValues[i] = (int) (Math.random() * (10 - 6 + 1));
+            computerValues[i] = (int) (Math.random() * (10 - 6 + 1) + 6);
+
         }
 
         // суммирование очков игрока и компьютера
