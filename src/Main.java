@@ -34,9 +34,10 @@ public class Main {
         double[] results = solveLinearSystem(matrix, constants);
 
         // выводим получивышиеся значения
-        System.out.println("y1 = " + results[0]);
-        System.out.println("y2 = " + results[1]);
-        System.out.println("y3 = " + results[2]);
+        double scale = Math.pow(10, 3);
+        System.out.println("y1 = " + Math.ceil(results[0] * scale) / scale);
+        System.out.println("y2 = " + Math.ceil(results[1] * scale) / scale);
+        System.out.println("y3 = " + Math.ceil(results[2] * scale) / scale);
     }
 
     public static double[] solveLinearSystem(double[][] matrix, double[] constants) {
